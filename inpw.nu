@@ -68,8 +68,8 @@ export def uninstall [
 	| upsert packages {|fc|
 		$fc.packages
 		| par-each {|i|
-			let name = ($i | path basename)
-			if not $name in $package_names {$i}
+			let parsed_package = (packer config parse package $i)
+			if not $parsed_package.name in $package_names {$i}
 		} | compact
 	}
 	| save $packages_nuon
