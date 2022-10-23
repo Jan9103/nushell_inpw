@@ -1,18 +1,18 @@
 {packages: [
 
+{name: 'bookmarks' tags: ['directory' 'bookmark' 'cd']
+	description: 'Bookmark directories'
+	source: 'jan9103/nushell_bookmarks'}
 {name: 'kitty' tags: ['terminal' 'integration' 'term']
 	description: 'Integrates xterm-kitty features into nu.'
 	source: 'jan9103/nushell_kitty'
 	settings: {condition: {env: {TERM: ['xterm-kitty']}}}}
-{name: 'git' tags: ['completion']
-	description: 'Tab-Complete and more for the git command'
-	source: 'jan9103/nushell_git'}
 {name: 'make' tags: ['makefile' 'completion']
 	description: 'Tab complete for GNU-Make'
 	source: 'jan9103/nushell_make'}
-#{name: 'nu_dev' tags: ['packer.nu' 'development' 'dev']
-#	description: 'Functions for developing packer.nu plugins'
-#	source: '~/git/nu_packages/nu_dev'}
+{name: 'neovim' tags: ['nvim' 'vim']
+	description: 'Neovim completion and aliases.'
+	source: 'jan9103/nushell_neovim'}
 {name: 'pueue' tags: ['async' 'background' 'job' 'jobs']
 	description: 'Background threads in nu via pueue'
 	source: 'jan9103/nushell_pueue'}
@@ -28,24 +28,15 @@
 {name: 'stream_pager' tags: ['pager' 'streampager', 'sp']
 	description: 'Set streampager as default and fix a few issues.'
 	source: 'jan9103/nushell_stream_pager'}
-#{name: 'welcome_screen' tags: ['welcome' 'screen' 'home' 'page']
-#	description: 'This shows a message when opening NuShell via TOIlet'
-#	source: 'jan9103/nushell_welcome_screen'}
+{name: 'tmux_autoattach' tags: ['tmux' 'attach' 'screen']
+	description: 'Auto attach TMUX sessions.'
+	source: 'jan9103/nushell_tmux_autoattach'}
 {name: 'yasp' tags: ['prompt']
 	description: 'Yet another shell prompt.'
 	source: 'jan9103/nushell_yasp'}
 {name: 'zoxide' tags: ['cd' 'z']
 	description: 'Load zoxide into NuShell'
 	source: 'jan9103/nushell_zoxide'}
-{name: 'bookmarks' tags: ['directory' 'bookmark' 'cd']
-	description: 'Bookmark directories'
-	source: 'jan9103/nushell_bookmarks'}
-{name: 'neovim' tags: ['nvim' 'vim']
-	description: 'Neovim completion and aliases.'
-	source: 'jan9103/nushell_neovim'}
-{name: 'tmux_autoattach' tags: ['tmux' 'attach' 'screen']
-	description: 'Auto attach TMUX sessions.'
-	source: 'jan9103/nushell_tmux_autoattach'}
 
 ]}
 # vim: ft=nu

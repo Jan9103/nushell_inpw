@@ -12,9 +12,10 @@ but you should avoid it and fully commit to inpw if you have it installed.
 - `inpw uninstall NAMES`
 - `inpw upgrade` (update the packages)
 - `inpw search TERM`
-- [ ] `inpw info NAME`
-- [ ] `inpw update` (update the repository)
 - `inpw listall` (list all packages known to inpw)
+- [ ] `inpw info NAME`
+- `inpw update` (update the repository)
+- `inpw sources edit` (edit the `inpw_sources.nuon`)
 
 ## Installation (for now)
 
@@ -30,14 +31,19 @@ Paste the following into `~/.config/nushell/packages.nuon`
 }
 ```
 
-Run `packer install`
-
-Copy a [valid repository](repo.md) to `$'($env.NU_PACKER_HOME)/inpw_repo.nuon'`
-(for example the `repo.nuon` in this git repo) (in the future you will
-be able to have multiple remote-repos, but for now this is how you do it).
-
+Run `packer install` and allow the `post-install` script to run.
 
 `inpw` is now active in new nushell instances.
+
+
+## The `inpw_sources.nuon`
+
+This files contains a list of all repositories you want to include.
+
+The repositories can be a URL (starting with `http`) or path to a `.nuon` [repository file](repo.md).
+
+After editing the file (`inpw sources edit`) you have to refresh your local combined
+repository file with `inpw update`.
 
 
 [packer.nu]: https://github.com/jan9103/packer.nu

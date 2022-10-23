@@ -87,8 +87,32 @@ export def search [
 	| select name description
 }
 
-export def update [] { print -e 'Not yet implemented' }
+# Edit the inpw_sources.nuon
+export def 'sources edit' [] {
+	let editor = ($env | get -i EDITOR | default nano)
+	nu -c $'($editor) ($env.NU_PACKER_HOME)/inpw_sources.nuon'
+}
 
+# update the repository (NOT THE PROGRAMS)
+export def update [] {
+	let repo_contents = (
+		open $'($env.NU_PACKER_HOME)/inpw_sources.nuon'
+		| each {|i|
+			if ($i | str starts-with 'http') { fetch $i
+			} else { open $i }
+		}
+	)
+	{
+		packages: (
+			$repo_contents | get -i packages | compact
+			# TODO: remove duplicates
+		)
+	}
+	| save $'($env.NU_PACKER_HOME)/inpw_repo.nuon'
+}
+
+# Update all installed packages
+# Just an alias for `packer update`
 export def upgrade [] { packer update }
 
 # display information about a package
