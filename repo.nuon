@@ -12,6 +12,9 @@
 {name: 'docker' tags: ['container']
 	description: 'Tab complete and more for docker'
 	source: 'jan9103/nushell_docker'}
+{name: 'inko-lang' tags: ['ivm' 'ipm' 'inko']
+	description: 'Tab complete and more for the inko language'
+	source: 'jan9103/nushell_inko_lang'}
 {name: 'kitty' tags: ['terminal' 'integration' 'term']
 	description: 'Integrates xterm-kitty features into nu.'
 	source: 'jan9103/nushell_kitty'
