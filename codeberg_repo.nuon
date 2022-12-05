@@ -1,0 +1,48 @@
+{packages: [
+
+{name: 'bookmarks' tags: ['directory' 'bookmark' 'cd']
+	description: 'Bookmark directories'
+	source: 'https://codeberg.org/packer.nu/bookmarks.git'}
+{name: 'docker' tags: ['container']
+	description: 'Tab complete and more for docker'
+	source: 'https://codeberg.org/packer.nu/docker.git'}
+{name: 'inko-lang' tags: ['ivm' 'ipm' 'inko']
+	description: 'Tab complete and more for the inko language'
+	source: 'https://codeberg.org/packer.nu/inko_lang.git'}
+{name: 'kitty' tags: ['terminal' 'integration' 'term']
+	description: 'Integrates xterm-kitty features into nu.'
+	source: 'https://codeberg.org/packer.nu/kitty.git'
+	settings: {condition: {env: {TERM: ['xterm-kitty']}}}}
+{name: 'make' tags: ['makefile' 'completion']
+	description: 'Tab complete for GNU-Make'
+	source: 'https://codeberg.org/packer.nu/make.git'}
+{name: 'neovim' tags: ['nvim' 'vim']
+	description: 'Neovim completion and aliases.'
+	source: 'https://codeberg.org/packer.nu/neovim.git'}
+{name: 'pueue' tags: ['async' 'background' 'job' 'jobs']
+	description: 'Background threads in nu via pueue'
+	source: 'https://codeberg.org/packer.nu/pueue.git'}
+{name: 'python' tags: ['venv' 'pylint' 'flake8']
+	description: 'Functionality around python: working venvs, parsed linters, etc'
+	source: 'https://codeberg.org/packer.nu/python.git'}
+{name: 'ssh' tags: ['remote']
+	description: 'Tab completion for ssh'
+	source: 'https://codeberg.org/packer.nu/ssh.git'}
+{name: 'starship' tags: ['prompt']
+	description: 'Starship shell prompt'
+	source: 'https://codeberg.org/packer.nu/starship.git'}
+{name: 'stream_pager' tags: ['pager' 'streampager', 'sp']
+	description: 'Set streampager as default and fix a few issues.'
+	source: 'https://codeberg.org/packer.nu/stream_pager.git'}
+{name: 'tmux_autoattach' tags: ['tmux' 'attach' 'screen']
+	description: 'Auto attach TMUX sessions.'
+	source: 'https://codeberg.org/packer.nu/tmux_autoattach.git'}
+{name: 'yasp' tags: ['prompt']
+	description: 'Yet another shell prompt.'
+	source: 'https://codeberg.org/packer.nu/yasp.git'}
+{name: 'zoxide' tags: ['cd' 'z']
+	description: 'Load zoxide into NuShell'
+	source: 'https://codeberg.org/packer.nu/zoxide.git'}
+
+]}
+# vim: ft=nu

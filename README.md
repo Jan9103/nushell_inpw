@@ -45,5 +45,9 @@ The repositories can be a URL (starting with `http`) or path to a `.nuon` [repos
 After editing the file (`inpw sources edit`) you have to refresh your local combined
 repository file with `inpw update`.
 
+The repository mirrors of the official packages are:
+- GitHub: `https://raw.githubusercontent.com/Jan9103/nushell_inpw/main/repo.nuon`
+- CodeBerg: `https://codeberg.org/packer.nu/inpw/raw/branch/main/codeberg_repo.nuon`
+
 
 [packer.nu]: https://github.com/jan9103/packer.nu
