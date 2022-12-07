@@ -104,7 +104,7 @@ export def update [] {
 	)
 	{
 		packages: (
-			$repo_contents | get -i packages | compact
+			$repo_contents | get -i packages | compact | flatten
 			# TODO: remove duplicates
 		)
 	}
