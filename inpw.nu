@@ -40,20 +40,20 @@ export def install [
 	} else {
 		open $packages_nuon
 		| upsert packages {|fc|
-			$fc.packages
+			$fc | get -i packages | default []
 			| append (
 				$repo_entries
 				| par-each {|i|
-					if ($fc.packages | where source == $i.source | length) == 0 {
+					if ($fc | get -i packages | default [] | where source == $i.source | length) == 0 {
 						{
 							source: $i.source
 							as: $i.name
 						}
-						| merge {$i | get -i settings | default {}}
+						| merge ($i | get -i settings | default {})
 					}
 				} | compact
 			)
-		}
+		} | to yaml
 		| save $packages_nuon
 		packer install --yes
 	}
