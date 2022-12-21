@@ -53,9 +53,9 @@ export def install [
 					}
 				} | compact
 			)
-		} | to yaml
+		}
 		| save $packages_nuon
-		packer install --yes
+		packer install
 	}
 }
 
@@ -83,7 +83,7 @@ export def search [
 ] {
 	let repo = (get_repo)
 	$repo.packages
-	| where ($term in $it.tags || $term == $it.name)
+	| where ($term in $it.tags or $term == $it.name)
 	| select name description
 }
 
