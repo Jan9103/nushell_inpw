@@ -10,11 +10,11 @@ but you should avoid it and fully commit to inpw if you have it installed.
 - `inpw install NAMES`
 	- [ ] install things without the repo (via source)
 - `inpw uninstall NAMES`
+- `inpw update` (update the repository)
 - `inpw upgrade` (update the packages)
 - `inpw search TERM`
 - `inpw listall` (list all packages known to inpw)
 - [ ] `inpw info NAME`
-- `inpw update` (update the repository)
 - `inpw sources edit` (edit the `inpw_sources.nuon`)
 
 ## Installation (for now)
@@ -31,9 +31,9 @@ Paste the following into `~/.config/nushell/packages.nuon`
 }
 ```
 
-Run `packer install` and allow the `post-install` script to run.
+Run `packer install`.
 
-`inpw` is now active in new nushell instances.
+`inpw` is now active in every **new** nushell instances.
 
 
 ## The `inpw_sources.nuon`
