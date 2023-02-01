@@ -98,7 +98,10 @@ export def update [] {
 	let repo_contents = (
 		open $'($env.NU_PACKER_HOME)/inpw_sources.nuon'
 		| each {|i|
-			if ($i | str starts-with 'http') { fetch $i
+			if ($i | str starts-with 'http') {
+				if (nu --version | split row '.' | get 1 | into int) >= 75 {
+					http get $i
+				} else { fetch $i }
 			} else { open $i }
 		}
 	)
