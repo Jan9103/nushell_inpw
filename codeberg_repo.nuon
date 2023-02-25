@@ -6,9 +6,9 @@
 {name: 'docker' tags: ['container']
 	description: 'Tab complete and more for docker'
 	source: 'https://codeberg.org/packer.nu/docker.git'}
-{name: 'inko-lang' tags: ['ivm' 'ipm' 'inko']
-	description: 'Tab complete and more for the inko language'
-	source: 'https://codeberg.org/packer.nu/inko_lang.git'}
+#{name: 'inko-lang' tags: ['ivm' 'ipm' 'inko']
+#	description: 'Tab complete and more for the inko language'
+#	source: 'https://codeberg.org/packer.nu/inko_lang.git'}
 {name: 'kitty' tags: ['terminal' 'integration' 'term']
 	description: 'Integrates xterm-kitty features into nu.'
 	source: 'https://codeberg.org/packer.nu/kitty.git'
