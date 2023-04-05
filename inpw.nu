@@ -9,7 +9,7 @@ def get_repo [] {
 	}
 }
 
-def packages_nuon [] { $'($nu.env-path | path dirname)/packages.nuon' }
+def packages_nuon [] { $'($nu.history-path | path dirname)/packages.nuon' }
 
 # install a package
 export def install [
