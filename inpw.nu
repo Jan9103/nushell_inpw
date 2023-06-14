@@ -54,7 +54,7 @@ export def install [
 				} | compact
 			)
 		}
-		| save $packages_nuon
+		| save -f $packages_nuon
 		packer install
 	}
 }
@@ -72,7 +72,7 @@ export def uninstall [
 			if not $parsed_package.name in $package_names {$i}
 		} | compact
 	}
-	| save $packages_nuon
+	| save -f $packages_nuon
 	# TODO: remove old stuff
 	packer compile
 }
@@ -111,7 +111,7 @@ export def update [] {
 			# TODO: remove duplicates
 		)
 	}
-	| save $'($env.NU_PACKER_HOME)/inpw_repo.nuon'
+	| save -f $'($env.NU_PACKER_HOME)/inpw_repo.nuon'
 }
 
 # Update all installed packages
