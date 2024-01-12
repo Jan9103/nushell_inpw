@@ -5,7 +5,7 @@
 	license: 'MIT'
 	url: 'https://github.com/jan9103/nushell_inpw'
 	min_nu_version: [0 75 0]
-	max_nu_version: [0 85 0]
+	max_nu_version: [0 89 0]
 	min_packer_version: [0 3 0]
 	max_packer_version: [0 5 0]
 	prefixed_modules: ['inpw']
