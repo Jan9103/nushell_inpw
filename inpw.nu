@@ -29,7 +29,7 @@ export def install [
 				print -e $'(ansi rb)Found ($search_result | length) results for ($name) instead of 1.(ansi reset)'
 				null
 			} else {
-				print $'Found ($name) at ($search_result.0.source).'
+				print $'Found ($name) at ($search_result.0.source).' #'
 				$search_result.0
 			}
 		}
@@ -69,7 +69,7 @@ export def uninstall [
 		$fc.packages
 		| par-each {|i|
 			let parsed_package = (packer config parse package $i)
-			if not $parsed_package.name in $package_names {$i}
+			if not ($parsed_package.name in $package_names) {$i}
 		} | compact
 	}
 	| save -f $packages_nuon
